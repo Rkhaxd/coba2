@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <title>Rkhax Porto</title>
+
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Segoe UI', sans-serif;
+    }
+
+    body {
+      height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      overflow: hidden;
+      color: white;
+      position: relative;
+    }
+
+    /* Background gradasi merah hitam animasi */
+    body::before {
+      content: "";
+      position: absolute;
+      width: 300%;
+      height: 300%;
+      background: linear-gradient(
+        45deg,
+        #000000,
+        #1a0000,
+        #140000,
+        #3a0000,
+        #000000
+      );
+      animation: gradientMove 10s ease infinite;
+      z-index: -2;
+    }
+
+    @keyframes gradientMove {
+      0% { transform: translate(0%, 0%); }
+      50% { transform: translate(-30%, -30%); }
+      100% { transform: translate(0%, 0%); }
+    }
+
+    /* Glow effect */
+    body::after {
+      content: "";
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      background: radial-gradient(circle, rgba(255,0,0,0.2) 0%, transparent 70%);
+      z-index: -1;
+    }
+
+    .container {
+      text-align: center;
+    }
+
+    h1 {
+      font-size: 3.5rem;
+      margin-bottom: 50px;
+      letter-spacing: 3px;
+      color: #ffffff;
+      text-shadow: 0 0 20px rgba(255, 0, 0, 0.8);
+    }
+
+    .buttons {
+      display: flex;
+      gap: 25px;
+      justify-content: center;
+      flex-wrap: wrap;
+    }
+
+    button {
+      padding: 15px 30px;
+      border: 2px solid #ff2e2e;
+      border-radius: 12px;
+      background: transparent;
+      color: #ff2e2e;
+      font-size: 1rem;
+      cursor: pointer;
+      transition: 0.3s ease;
+      position: relative;
+      overflow: hidden;
+    }
+
+    /* Hover efek glow */
+    button:hover {
+      background: #ff2e2e;
+      color: black;
+      box-shadow: 0 0 20px #ff0000, 0 0 40px #ff0000;
+      transform: scale(1.1);
+    }
+
+  </style>
+</head>
+<body>
+
+  <div class="container">
+    <h1>Rkhax Porto</h1>
+
+    <div class="buttons">
+<div class="buttons">
+  <a href="desain.html"><button>Desain</button></a>
+  <a href="video.html"><button>Edit Video</button></a>
+  <a href="software.html"><button>Software</button></a>
+  
+</div>
+    </div>
+  </div>
+
+</body>
+</html>
